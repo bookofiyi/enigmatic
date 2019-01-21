@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/player_superskill.gd" type="Script" id=1]
+
+[resource]
+
+script = ExtResource( 1 )
+skill_name = "shooting_storm"
+skill_description = "player shoots faster and farther"
+mana_cost = 4
+base_damage = 10
+success_chance = 1.0
+

@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/level1.gd" type="Script" id=1]
+[ext_resource path="res://sprites/godot.png" type="Texture" id=2]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/zombie.tscn" type="PackedScene" id=8]
+
+[node name="level1" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_offset = Vector2( 0.1, 0.1 )
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -317.034, -924.827 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 20, 41 )
+
+[node name="platform_container" type="Node" parent="."]
+
+[node name="left" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 186, 233 )
+
+[node name="left2" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 186, -38 )
+
+[node name="left3" parent="platform_container" instance=ExtResource( 4 )]
+editor/display_folded = true
+position = Vector2( 196, -271 )
+
+[node name="Sprite" parent="platform_container/left3" index="0"]
+scale = Vector2( 0.2, 10 )
+
+[node name="left4" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 186, -504 )
+
+[node name="left5" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 186, -737 )
+
+[node name="right" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 806, 103 )
+
+[node name="right2" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 806, -143 )
+
+[node name="right3" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 806, -386 )
+
+[node name="right4" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 806, -586 )
+
+[node name="base" parent="platform_container" instance=ExtResource( 4 )]
+position = Vector2( 526, 363 )
+scale = Vector2( 2.5, 1 )
+
+[node name="wall_container" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="wall" parent="wall_container" instance=ExtResource( 5 )]
+position = Vector2( -10, 0 )
+physics_material_override = null
+
+[node name="wall2" parent="wall_container" instance=ExtResource( 5 )]
+position = Vector2( 1030, 0 )
+
+[node name="box" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="box" parent="box" instance=ExtResource( 6 )]
+position = Vector2( 400, -140 )
+
+[node name="enemy" parent="." instance=ExtResource( 7 )]
+
+[node name="zombie" parent="." instance=ExtResource( 8 )]
+position = Vector2( 540, -40 )
+
+
+[editable path="platform_container/left3"]

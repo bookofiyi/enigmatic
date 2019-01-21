@@ -1,0 +1,66 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Battler",
+"language": "GDScript",
+"path": "res://scripts/player.gd"
+}, {
+"base": "Resource",
+"class": "CharacterStats",
+"language": "GDScript",
+"path": "res://scripts/CharacterStats.gd"
+}, {
+"base": "Node",
+"class": "CombatAction",
+"language": "GDScript",
+"path": "res://scripts/combataction.gd"
+}, {
+"base": "Reference",
+"class": "Hit",
+"language": "GDScript",
+"path": "res://scripts/hit.gd"
+}, {
+"base": "Resource",
+"class": "Skill",
+"language": "GDScript",
+"path": "res://scripts/player_superskill.gd"
+}, {
+"base": "Node",
+"class": "job",
+"language": "GDScript",
+"path": "res://scripts/job.gd"
+}, {
+"base": "Node",
+"class": "skillname",
+"language": "GDScript",
+"path": "res://scripts/skillaction.gd"
+} ]
+_global_script_class_icons={
+"Battler": "",
+"CharacterStats": "",
+"CombatAction": "",
+"Hit": "",
+"Skill": "",
+"job": "",
+"skillname": ""
+}
+
+[application]
+
+config/name="heights_of_glory"
+run/main_scene="res://scenes/level1.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"

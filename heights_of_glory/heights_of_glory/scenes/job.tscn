@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/job.gd" type="Script" id=1]
+[ext_resource path="res://scripts/player_stats.tres" type="Resource" id=2]
+[ext_resource path="res://scenes/skillaction.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/skill.tscn" type="PackedScene" id=4]
+
+[node name="job" type="Node"]
+script = ExtResource( 1 )
+starting_stats = ExtResource( 2 )
+starting_skills = [ "shooting_storm.tres" ]
+character_skill_scene = ExtResource( 3 )
+
+[node name="skill" parent="." instance=ExtResource( 4 )]
+
