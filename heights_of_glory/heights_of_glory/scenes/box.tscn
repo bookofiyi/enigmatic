@@ -6,7 +6,9 @@
 
 extents = Vector2( 32.3088, 31.2138 )
 
-[node name="box" type="RigidBody2D"]
+[node name="box" type="RigidBody2D" groups=[
+"box",
+]]
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

@@ -9,6 +9,7 @@ onready var sprite = get_node("sprite")
 
 
 func _ready():
+
 	
 	
 	set_process(true)
